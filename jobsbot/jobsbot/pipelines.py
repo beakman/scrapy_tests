@@ -15,4 +15,9 @@ class JobsbotPipeline(object):
     	url = item['url']
     	message = '%s \n -----------\n%s\n\n%s\n\n%s' % (title, content, place, url)
 
-        requests.get('https://api.telegram.org/bot279656133:AAHoIJwa8iG7v7-V6i8zCL6YKaYRFqqep_g/sendMessage?chat_id=@trabajofuengirola&disable_web_page_preview=true&text='+message)
+    	if item['city'][0] == 'fuengirola':
+        	requests.get('https://api.telegram.org/bot279656133:AAHoIJwa8iG7v7-V6i8zCL6YKaYRFqqep_g/sendMessage?chat_id=@trabajofuengirola&disable_web_page_preview=true&text='+message)
+    	if item['city'][0] == 'malaga':
+        	requests.get('https://api.telegram.org/bot279656133:AAHoIJwa8iG7v7-V6i8zCL6YKaYRFqqep_g/sendMessage?chat_id=@trabajomalaga&disable_web_page_preview=true&text='+message)
+    	if item['city'][0] == 'andalucia':
+        	requests.get('https://api.telegram.org/bot279656133:AAHoIJwa8iG7v7-V6i8zCL6YKaYRFqqep_g/sendMessage?chat_id=@trabajoandalucia&disable_web_page_preview=true&text='+message)
