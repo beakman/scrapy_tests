@@ -4,6 +4,9 @@ jobsbot/items.py
 jobsbot/pipelines.py
 jobsbot/settings.py
 jobsbot/spiders/__init__.py
+jobsbot/spiders/milanuncios-andalucia.py
+jobsbot/spiders/milanuncios-fuengirola.py
+jobsbot/spiders/milanuncios-malaga.py
 jobsbot/spiders/milanuncios.py
 project.egg-info/PKG-INFO
 project.egg-info/SOURCES.txt
