@@ -7,7 +7,6 @@ jobsbot/spiders/__init__.py
 jobsbot/spiders/milanuncios-andalucia.py
 jobsbot/spiders/milanuncios-fuengirola.py
 jobsbot/spiders/milanuncios-malaga.py
-jobsbot/spiders/milanuncios.py
 project.egg-info/PKG-INFO
 project.egg-info/SOURCES.txt
 project.egg-info/dependency_links.txt

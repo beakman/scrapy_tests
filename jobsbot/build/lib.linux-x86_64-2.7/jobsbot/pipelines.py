@@ -5,6 +5,7 @@
 # Don't forget to add your pipeline to the ITEM_PIPELINES setting
 # See: http://doc.scrapy.org/en/latest/topics/item-pipeline.html
 import requests
+import time
 
 class JobsbotPipeline(object):
 
@@ -15,9 +16,12 @@ class JobsbotPipeline(object):
     	url = item['url']
     	message = '%s \n -----------\n%s\n\n%s\n\n%s' % (title, content, place, url)
 
-    	if item['city'][0] == 'fuengirola':
+    	if item['city'] == 'fuengirola':
         	requests.get('https://api.telegram.org/bot279656133:AAHoIJwa8iG7v7-V6i8zCL6YKaYRFqqep_g/sendMessage?chat_id=@trabajofuengirola&disable_web_page_preview=true&text='+message)
-    	if item['city'][0] == 'malaga':
+        	time.sleep(2)
+    	if item['city'] == 'malaga':
         	requests.get('https://api.telegram.org/bot279656133:AAHoIJwa8iG7v7-V6i8zCL6YKaYRFqqep_g/sendMessage?chat_id=@trabajomalaga&disable_web_page_preview=true&text='+message)
-    	if item['city'][0] == 'andalucia':
+    		time.sleep(2)
+    	if item['city'] == 'andalucia':
         	requests.get('https://api.telegram.org/bot279656133:AAHoIJwa8iG7v7-V6i8zCL6YKaYRFqqep_g/sendMessage?chat_id=@trabajoandalucia&disable_web_page_preview=true&text='+message)
+    		time.sleep(2)
