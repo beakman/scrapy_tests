@@ -25,3 +25,6 @@ class JobsbotPipeline(object):
     	if item['city'] == 'andalucia':
         	requests.get('https://api.telegram.org/bot279656133:AAHoIJwa8iG7v7-V6i8zCL6YKaYRFqqep_g/sendMessage?chat_id=@trabajoandalucia&disable_notification=true&disable_web_page_preview=true&text='+message)
     		time.sleep(5)
+		if item['city'] == 'sevilla':
+        	requests.get('https://api.telegram.org/bot279656133:AAHoIJwa8iG7v7-V6i8zCL6YKaYRFqqep_g/sendMessage?chat_id=@trabajosevilla&disable_notification=true&disable_web_page_preview=true&text='+message)
+    		time.sleep(5)
